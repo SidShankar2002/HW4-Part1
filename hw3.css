@@ -1,0 +1,115 @@
+/* Name: Sid Shankar
+Email: siddarth_shankar@student.uml.edu 
+This document shows the css file, which is responsible for
+how the pages look. The table has a square container where the user
+can scroll through. The left column and top row are fixed, so when scrolling 
+down the table, they can see what each number corresponds to in terms of their
+factors.  */
+
+.error {
+    color: red; /* Set the color as per your design */
+    margin-top: 10px; /* Adjust the spacing as needed */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputContainer,
+#tableContainer {
+    width: 80%; /* Adjust the width as needed */
+    box-sizing: border-box;
+}
+
+#tableContainer1 {
+    overflow: auto;
+    border: 1px solid #680d0d;
+    border-radius: 5px;
+    max-height: 500px; /* Adjust the max-height as needed */
+    max-width: 750px;
+    box-sizing: border-box;
+}
+
+form {
+    width: 100%; /* Use full width for the form */
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    border: 1px solid #680d0d;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: calc(100% - 16px); /* Adjust for padding */
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4CAF50;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#tableContainer {
+    width: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f1f1f1;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+td:first-child,
+th:first-child {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+
+/* Highlight even numbers */
+td.even {
+    background-color: #aaffaa;
+}
+
+/* Bold negative numbers */
+td.negative {
+    font-weight: bold;
+}
